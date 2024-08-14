@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador | Oracle + Alura</title>
+    <meta name="description" content="Proyecto propuesto por ONE (Oracle Next Education) + Alura utilizando HTML, SASS y Javascript">
+    <link rel="icon" href="./favicon/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main">
+        <section class="main__logo">
+            <h1 class="main__h1"><img class="main__img" src="img/logo.svg" alt="Logo de Alura Latam"></h1>
+        </section>
+        <section class="main__form">
+            <textarea class="main__textarea" name="text_in_area" id="texto" placeholder="Ingrese el texto aquí" required></textarea>
+            <div class="main__footer">
+                <small class="main__small">
+                    <img src="img/exclamacion-circle.svg" alt="Exclamación" class="main__icon" />
+                    Solo letras minúsculas y sin acentos</small>
+                <div class="main__buttons">
+                    <button class="main__button main__button-primary" id="enc">Encriptar</button>
+                    <button class="main__button main__button-secondary" id="des">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <aside class="aside">
+            <section class="aside__content" id="default">
+                <div class="aside__img">
+                    <img src="img/muneco.svg" alt="Ningún mensaje encontrado - imagen">
+                </div>
+                <div class="aside__text">
+                    <h2 class="aside__h2">Ningún mensaje fue encontrado</h2>
+                    <p class="aside__p">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </section>
+            <section class="aside__content aside__content--none" id="result">
+                <textarea class="aside__textarea" name="text_out_area" id="texto_out" disabled></textarea>
+                <button class="aside__button bubbly-button" id="copiar">Copiar</button>
+            </section>
+        </aside>
+    </main>
+    <footer class="pie-pagina"> 
+        <p class="developer">Desarrollado por Ana Luna</p>
+    </footer>
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                <h3 class="modal__title">Error</h3>
+            </div>
+            <div class="modal__body">
+                <p class="modal__p">El texto no puede contener mayúsculas y/o caracteres especiales</p>
+            </div>
+            <div class="modal__footer">
+                <button class="modal__button" id="modalButton">Entendido</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/encriptador.js"></script>
+</body>
+</html>
